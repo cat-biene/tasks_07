@@ -19,7 +19,7 @@ const humans: Human[] = [
 function sortByAge(people: Human[]): Human[] {
     return people.sort((a, b) => a.age - b.age);
 }
-
+  
 console.log(sortByAge(humans));
 
 // Задача 2: Фильтрация объектов по условию
@@ -39,7 +39,7 @@ function allCheapProducts(product: Product[]): Product[] {
 }
 
 console.log(allCheapProducts(products));
-
+ 
 // Задача 3: Поиск объекта по значению свойства
 
 //Текст задачи: У вас есть массив объектов, представляющих книги. Напишите функцию, которая находит книгу по её названию.
@@ -52,11 +52,11 @@ const library: Book[] = [
     { id: 5, title: 'The Catcher in the Rye', author: 'J.D. Salinger' }
 ];
 
-function bookByAuthor(author: string): Book[] {
-    return library.filter(book => book.author === author);
+function bookByAuthor(books: Book[], title: string): Book | undefined {
+    return books.find(book => book.title === title);
 }
 
-console.log(bookByAuthor('Jane Austen'));
+console.log(bookByAuthor(library, 'The Catcher in the Rye'));
 
 // Задача 4: Вычисление суммы значений свойства объектов
 
